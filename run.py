@@ -3,8 +3,8 @@ from datetime import datetime
 from flask import Flask, redirect, render_template, request, session, url_for
 
 app = Flask(__name__)
-# app.secret_key = os.getenv("secret", "randomstring123")
-app.secret_key = "randomstring123"
+app.secret_key = os.getenv("SECRET", "randomstring123")
+
 messages = []
 
 
@@ -40,5 +40,8 @@ def user(username):
 
 
 # For deployment:
-# app.run(host=os.getenv('IP', "0.0.0.0"), port=int(os.getenv('PORT', "5000")), debug=False)
-app.run(debug=True)
+app.run(host=os.getenv('IP', "0.0.0.0"), port=int(
+    os.getenv('PORT', "5000")), debug=False)
+
+# For development:
+# app.run(debug=True)
