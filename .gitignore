@@ -1,1 +1,3 @@
 *.sql
+.bashrc
+config.py
