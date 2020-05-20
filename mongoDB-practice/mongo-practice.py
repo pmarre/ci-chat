@@ -28,3 +28,5 @@ documents = coll.find({'nationality': 'american'})
 
 for doc in documents:
     print(doc)
+
+# testing this out
